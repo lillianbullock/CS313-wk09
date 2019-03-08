@@ -43,6 +43,7 @@ function mailCalc(req, res) {
 
     if (!isNaN(price)) {
         price /= 100;  // convert to dollars
+        price = "$" + price.toFixed(2); // string with 2 decimal places
     }
 
     console.log("Price: " + price);
