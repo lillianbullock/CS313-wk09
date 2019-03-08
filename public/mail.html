@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Mail Calculator</h1>
+
+    <form action="calculate" method="get">
+        Weight (oz):<br>
+        <input name="weight" type="text"></input><br><br>
+
+        Mail Type:<br>
+        <select name="type">
+            <option value="stamped">Letters (Stamped)</option>
+            <option value="metered">Letters (Metered)</option>
+            <option value="flats">Large Envelopes (Flats)</option>
+            <option value="retail">First-Class Package Service—Retail</option>
+        </select>
+
+        <br><br>
+
+        <input type="submit" value="Calculate">
+    </form>
+</body>
+</html>
