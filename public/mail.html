@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome</title>
+    
+    <script src=frontEnd.js> </script>
+    
+    <title>Mail</title>
 </head>
 <body>
     <h1>Mail Calculator</h1>
 
-    <form action="calculate" method="get">
-        Weight (oz):<br>
-        <input name="weight" type="text"></input><br><br>
+    <form action="calculate" method="get"
+    onsubmit="return validateNumber('weight', 'weightError')">
+        Weight (oz): <span id="weightError" class="error" style="visibility:hidden">Empty or Invalid Field</span><br>
+        <input id="weight" name="weight" type="text"
+        onchange="validateNumber('weight', 'weightError')"></input><br><br>
 
         Mail Type:<br>
         <select name="type">
